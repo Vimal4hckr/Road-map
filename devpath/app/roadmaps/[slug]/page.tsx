@@ -164,7 +164,10 @@ export default async function RoadmapPage({ params }: Props) {
 
           </div>
 
-          <InteractiveRoadmap nodes={roadmap.nodes} />
+          <InteractiveRoadmap
+  nodes={roadmap.nodes}
+  roadmapSlug={roadmap.slug}
+/>
 
         </div>
 
