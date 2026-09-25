@@ -1,3 +1,4 @@
+import { lessons } from "@/data/lessons";
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -28,6 +29,7 @@ export default async function TopicPage({
   const { roadmap, topic } = await params;
 
   const data = topicDetails[topic];
+  const topicLessons = lessons[topic] || [];
 
   if (!data) {
     return (
@@ -187,34 +189,49 @@ export default async function TopicPage({
 
               <div className="space-y-4">
 
-                {data.subtopics.map((item, index) => (
-                  <article
-                    key={item.title}
-                    className="rounded-2xl border border-blue-100 bg-white p-6 shadow-sm transition hover:border-blue-300 hover:shadow-lg hover:shadow-blue-100"
-                  >
+                {data.subtopics.map((item, index) => {
 
-                    <div className="flex gap-4">
+  const lesson = topicLessons[index];
 
-                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-blue-600 text-sm font-bold text-white">
-                        {index + 1}
-                      </div>
+  return (
+    <article
+      key={item.title}
+      className="rounded-2xl border border-blue-100 bg-white p-6 shadow-sm transition hover:border-blue-300 hover:shadow-lg hover:shadow-blue-100"
+    >
 
-                      <div>
+      <div className="flex gap-4">
 
-                        <h3 className="font-bold text-slate-900">
-                          {item.title}
-                        </h3>
+        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-blue-600 text-sm font-bold text-white">
+          {index + 1}
+        </div>
 
-                        <p className="mt-2 text-sm leading-6 text-slate-500">
-                          {item.description}
-                        </p>
+        <div className="flex-1">
 
-                      </div>
+          <h3 className="font-bold text-slate-900">
+            {item.title}
+          </h3>
 
-                    </div>
+          <p className="mt-2 text-sm leading-6 text-slate-500">
+            {item.description}
+          </p>
 
-                  </article>
-                ))}
+          {lesson && (
+            <Link
+              href={`/learn/${roadmap}/${topic}/lesson/${lesson.id}`}
+              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700"
+            >
+              Start Lesson
+              <ArrowRight size={15} />
+            </Link>
+          )}
+
+        </div>
+
+      </div>
+
+    </article>
+  );
+})}
 
               </div>
 
