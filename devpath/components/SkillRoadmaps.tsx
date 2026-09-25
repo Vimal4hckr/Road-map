@@ -30,7 +30,7 @@ const skills = [
 
 export default function SkillRoadmaps() {
   return (
-    <section className="border-b border-white/10 px-6 py-20">
+    <section className="border-b border-blue-100 bg-gradient-to-b from-blue-50 to-white px-6 py-20">
       <div className="mx-auto max-w-7xl">
 
         <div className="mb-10">
@@ -42,7 +42,7 @@ export default function SkillRoadmaps() {
             Skill-Based Roadmaps
           </h2>
 
-          <p className="mt-3 max-w-xl text-gray-500">
+          <p className="mt-3 max-w-xl text-slate-500">
             Focus on one technology and follow a structured path
             to master it from the fundamentals to advanced concepts.
           </p>
@@ -59,7 +59,7 @@ export default function SkillRoadmaps() {
               >
                 <Icon
                   size={25}
-                  className="text-gray-500 transition group-hover:text-white"
+                  className="text-slate-500 transition group-hover:text-white"
                 />
 
                 <span className="text-sm text-gray-400 transition group-hover:text-white">

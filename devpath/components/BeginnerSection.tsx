@@ -28,7 +28,7 @@ const beginnerPaths = [
 
 export default function BeginnerSection() {
   return (
-    <section className="border-b border-white/10 px-6 py-20">
+    <section className="border-b border-blue-100 bg-gradient-to-b from-blue-50 to-white px-6 py-20">
       <div className="mx-auto max-w-7xl">
 
         <div className="mb-10">
@@ -40,7 +40,7 @@ export default function BeginnerSection() {
             Beginner Roadmaps
           </h2>
 
-          <p className="mt-3 max-w-xl text-gray-500">
+          <p className="mt-3 max-w-xl text-slate-500">
             No previous experience? Start here and build your
             foundation step by step.
           </p>
@@ -63,7 +63,7 @@ export default function BeginnerSection() {
                   {path.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-6 text-gray-500">
+                <p className="mt-3 text-sm leading-6 text-slate-500">
                   {path.description}
                 </p>
 

@@ -51,72 +51,83 @@ export default function RoadmapSection() {
   return (
     <section
       id="roadmaps"
-      className="border-b border-white/10 px-6 py-20"
+      className="border-y border-blue-100 bg-blue-50/50 px-6 py-20"
     >
       <div className="mx-auto max-w-7xl">
 
-        {/* Heading */}
         <div className="mb-10 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+
           <div>
-            <p className="mb-3 text-xs font-medium uppercase tracking-[0.25em] text-gray-600">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.25em] text-blue-600">
               Career Paths
             </p>
 
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
               Role-Based Roadmaps
             </h2>
 
-            <p className="mt-3 max-w-xl text-gray-500">
+            <p className="mt-3 max-w-xl text-slate-500">
               Choose a career path and follow a structured journey
               from beginner to professional.
             </p>
           </div>
 
-          <button className="flex items-center gap-2 text-sm text-gray-400 transition hover:text-white">
+          <a
+            href="/roadmaps"
+            className="flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700"
+          >
             View all roadmaps
             <ArrowUpRight size={16} />
-          </button>
+          </a>
+
         </div>
 
-        {/* Cards */}
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
           {roadmaps.map((roadmap) => {
             const Icon = roadmap.icon;
 
             return (
-              <div
+              <a
+                href="/roadmaps"
                 key={roadmap.title}
-                className="group rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.04]"
+                className="group rounded-2xl border border-blue-100 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-100"
               >
-                <div className="mb-6 flex items-start justify-between">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5">
+
+                <div className="flex items-start justify-between">
+
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50">
                     <Icon
-                      size={21}
-                      className="text-gray-300"
+                      size={22}
+                      className="text-blue-600"
                     />
                   </div>
 
                   <ArrowUpRight
                     size={18}
-                    className="text-gray-600 transition group-hover:text-white"
+                    className="text-slate-300 transition group-hover:text-blue-600"
                   />
+
                 </div>
 
-                <h3 className="text-lg font-semibold">
+                <h3 className="mt-6 text-lg font-bold text-slate-900">
                   {roadmap.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-6 text-gray-500">
+                <p className="mt-3 text-sm leading-6 text-slate-500">
                   {roadmap.description}
                 </p>
 
-                <div className="mt-6 text-sm text-gray-400 transition group-hover:text-white">
+                <div className="mt-6 font-semibold text-blue-600">
                   Explore roadmap →
                 </div>
-              </div>
+
+              </a>
             );
           })}
+
         </div>
+
       </div>
     </section>
   );

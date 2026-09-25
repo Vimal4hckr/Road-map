@@ -15,7 +15,7 @@ export default function AITutorSection() {
               <Bot size={24} />
             </div>
 
-            <div className="mt-8 flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-gray-500">
+            <div className="mt-8 flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-slate-500">
               <Sparkles size={14} />
               AI Powered Learning
             </div>
@@ -23,7 +23,7 @@ export default function AITutorSection() {
             <h2 className="mt-4 max-w-2xl text-3xl font-bold sm:text-5xl">
               Your Personal
               <br />
-              <span className="text-gray-500">
+              <span className="text-slate-500">
                 AI Learning Tutor.
               </span>
             </h2>

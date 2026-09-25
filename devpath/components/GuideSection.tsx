@@ -52,7 +52,7 @@ export default function GuideSection() {
               Developer Guides
             </h2>
 
-            <p className="mt-3 max-w-xl text-gray-500">
+            <p className="mt-3 max-w-xl text-slate-500">
               Practical explanations that help you understand
               the technologies behind modern software.
             </p>
@@ -94,7 +94,7 @@ export default function GuideSection() {
                   {guide.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-6 text-gray-500">
+                <p className="mt-3 text-sm leading-6 text-slate-500">
                   {guide.description}
                 </p>
               </article>

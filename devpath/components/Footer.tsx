@@ -20,11 +20,11 @@ export default function Footer() {
               </span>
 
               <span>
-                Dev<span className="text-gray-500">Path</span>
+                Dev<span className="text-slate-500">Path</span>
               </span>
             </div>
 
-            <p className="mt-5 max-w-md text-sm leading-6 text-gray-500">
+            <p className="mt-5 max-w-md text-sm leading-6 text-slate-500">
               A structured learning platform for developers.
               Learn the right skills, build real projects,
               and grow your technology career.
@@ -35,7 +35,7 @@ export default function Footer() {
 
               <a
                 href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 text-gray-500 transition hover:border-white/20 hover:bg-white/5 hover:text-white"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 text-slate-500 transition hover:border-white/20 hover:bg-white/5 hover:text-white"
                 aria-label="Website"
               >
                 <Globe size={17} />
@@ -43,7 +43,7 @@ export default function Footer() {
 
               <a
                 href="mailto:hello@devpath.dev"
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 text-gray-500 transition hover:border-white/20 hover:bg-white/5 hover:text-white"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 text-slate-500 transition hover:border-white/20 hover:bg-white/5 hover:text-white"
                 aria-label="Email"
               >
                 <Mail size={17} />
@@ -51,7 +51,7 @@ export default function Footer() {
 
               <a
                 href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 text-gray-500 transition hover:border-white/20 hover:bg-white/5 hover:text-white"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 text-slate-500 transition hover:border-white/20 hover:bg-white/5 hover:text-white"
                 aria-label="External link"
               >
                 <ArrowUpRight size={17} />
@@ -67,7 +67,7 @@ export default function Footer() {
               Platform
             </h3>
 
-            <div className="mt-5 space-y-3 text-sm text-gray-500">
+            <div className="mt-5 space-y-3 text-sm text-slate-500">
 
               <a
                 className="block transition hover:text-white"
@@ -106,7 +106,7 @@ export default function Footer() {
               Resources
             </h3>
 
-            <div className="mt-5 space-y-3 text-sm text-gray-500">
+            <div className="mt-5 space-y-3 text-sm text-slate-500">
 
               <a
                 className="block transition hover:text-white"

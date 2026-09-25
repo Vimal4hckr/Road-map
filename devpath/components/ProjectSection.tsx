@@ -51,7 +51,7 @@ export default function ProjectSection() {
             Practice With Projects
           </h2>
 
-          <p className="mt-3 max-w-xl text-gray-500">
+          <p className="mt-3 max-w-xl text-slate-500">
             Turn what you learn into practical projects that
             strengthen your portfolio and your skills.
           </p>
@@ -68,7 +68,7 @@ export default function ProjectSection() {
               >
                 <Icon
                   size={25}
-                  className="text-gray-500 transition group-hover:text-white"
+                  className="text-slate-500 transition group-hover:text-white"
                 />
 
                 <div className="mt-6 text-xs uppercase tracking-wider text-gray-600">
@@ -79,7 +79,7 @@ export default function ProjectSection() {
                   {project.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-6 text-gray-500">
+                <p className="mt-3 text-sm leading-6 text-slate-500">
                   {project.description}
                 </p>
 

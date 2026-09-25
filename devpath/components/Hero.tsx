@@ -1,83 +1,116 @@
-import { ArrowRight, Search } from "lucide-react";
+import { ArrowRight, Search, Sparkles } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden border-b border-white/10">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(255,255,255,0.08),transparent_35%)]" />
+    <section className="relative overflow-hidden bg-white">
+
+      {/* Background decoration */}
+      <div className="absolute left-1/2 top-0 h-[500px] w-[700px] -translate-x-1/2 rounded-full bg-blue-100/70 blur-3xl" />
+
+      <div className="absolute right-0 top-20 h-64 w-64 rounded-full bg-sky-100 blur-3xl" />
 
       <div className="relative mx-auto max-w-5xl px-6 py-24 text-center sm:py-32">
 
-        <div className="mb-6 inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium uppercase tracking-[0.2em] text-gray-400">
+        {/* Badge */}
+        <div className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-blue-700">
+
+          <Sparkles size={14} />
+
           Learn • Build • Grow
+
         </div>
 
-        <h1 className="text-5xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
-          Learn Technology
+        {/* Heading */}
+        <h1 className="text-5xl font-bold tracking-tight text-slate-950 sm:text-6xl lg:text-7xl">
+
+          Master Technology
+
           <br />
-          <span className="text-gray-500">
-            Without Getting Lost.
+
+          <span className="text-blue-600">
+            Step by Step.
           </span>
+
         </h1>
 
-        <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-gray-400 sm:text-lg">
-          Follow structured learning roadmaps, master new technologies,
-          build real projects, and become job-ready.
+        <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-slate-500 sm:text-lg">
+          Follow structured learning roadmaps, master modern
+          technologies, build real projects, and become
+          job-ready.
         </p>
 
         {/* Search */}
         <div className="mx-auto mt-10 max-w-2xl">
-          <div className="flex items-center rounded-xl border border-white/15 bg-white/[0.04] p-2 shadow-2xl backdrop-blur">
+
+          <div className="flex items-center rounded-2xl border border-blue-200 bg-white p-2 shadow-xl shadow-blue-100/60">
+
             <Search
-              size={22}
-              className="ml-3 shrink-0 text-gray-500"
+              size={21}
+              className="ml-3 shrink-0 text-blue-500"
             />
 
             <input
               type="text"
               placeholder="Search a roadmap, skill or technology..."
-              className="w-full bg-transparent px-4 py-3 text-sm text-white outline-none placeholder:text-gray-600"
+              className="w-full bg-transparent px-4 py-3 text-sm text-slate-900 outline-none placeholder:text-slate-400"
             />
 
-            <button className="hidden rounded-lg bg-white px-5 py-3 text-sm font-medium text-black transition hover:bg-gray-200 sm:block">
+            <button className="hidden rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 sm:block">
               Search
             </button>
+
           </div>
+
         </div>
 
         {/* Popular */}
         <div className="mt-5 flex flex-wrap items-center justify-center gap-2 text-sm">
-          <span className="mr-2 text-gray-600">
+
+          <span className="mr-2 text-slate-400">
             Popular:
           </span>
 
-          {["JavaScript", "Python", "React", "Java", "AI / ML"].map(
-            (item) => (
-              <button
-                key={item}
-                className="rounded-full border border-white/10 px-3 py-1.5 text-gray-400 transition hover:border-white/20 hover:bg-white/5 hover:text-white"
-              >
-                {item}
-              </button>
-            )
-          )}
+          {[
+            "JavaScript",
+            "Python",
+            "React",
+            "Java",
+            "AI / ML",
+          ].map((item) => (
+            <button
+              key={item}
+              className="rounded-full border border-blue-100 bg-blue-50 px-3 py-1.5 text-blue-600 transition hover:border-blue-200 hover:bg-blue-100"
+            >
+              {item}
+            </button>
+          ))}
+
         </div>
 
-        {/* CTA */}
+        {/* Buttons */}
         <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
-          <button className="group flex items-center justify-center gap-2 rounded-lg bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-gray-200">
+
+          <a
+            href="/roadmaps"
+            className="group flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white shadow-lg shadow-blue-200 transition hover:bg-blue-700"
+          >
             Explore Roadmaps
 
             <ArrowRight
-              size={16}
+              size={17}
               className="transition-transform group-hover:translate-x-1"
             />
-          </button>
 
-          <button className="rounded-lg border border-white/15 px-6 py-3 text-sm font-medium text-gray-300 transition hover:bg-white/5 hover:text-white">
+          </a>
+
+          <button className="rounded-xl border border-blue-200 bg-white px-6 py-3 font-semibold text-blue-600 transition hover:bg-blue-50">
             How It Works
           </button>
+
         </div>
+
       </div>
+
     </section>
   );
 }
